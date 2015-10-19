@@ -1,0 +1,165 @@
+fileFormatVersion: 2
+guid: 402fb866cab0f444e936828f1594e10d
+timeCreated: 1439927205
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: backgroundBirdSpriteSheet_0
+    21300002: backgroundBirdSpriteSheet_1
+    21300004: backgroundBirdSpriteSheet_2
+    21300006: backgroundBirdSpriteSheet_3
+    21300008: backgroundBirdSpriteSheet_4
+    21300010: backgroundBirdSpriteSheet_5
+    21300012: backgroundBirdSpriteSheet_6
+    21300014: backgroundBirdSpriteSheet_7
+    21300016: backgroundBirdSpriteSheet_8
+    21300018: backgroundBirdSpriteSheet_9
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: backgroundBirdSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 1887
+        width: 746
+        height: 569
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: backgroundBirdSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 1895
+        width: 754
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: backgroundBirdSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 2037
+        y: 2170
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: backgroundBirdSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 2147
+        y: 1800
+        width: 745
+        height: 474
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: backgroundBirdSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 2104
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: backgroundBirdSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 876
+        width: 753
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: backgroundBirdSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 848
+        width: 751
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: backgroundBirdSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 2139
+        y: 877
+        width: 753
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: backgroundBirdSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 207
+        width: 753
+        height: 466
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: backgroundBirdSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 300
+        width: 751
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
