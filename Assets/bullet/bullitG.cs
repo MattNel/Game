@@ -3,7 +3,7 @@ using System.Collections;
 
 public class bullitG : MonoBehaviour {
 
-	float movement_speed = 70;
+	//float movement_speed = 70;
 	bool direction = true;
 
 	void Start ()

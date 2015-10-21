@@ -7,12 +7,6 @@ public class bulHit : MonoBehaviour {
 	swap swaper;
 	public ParticleSystem expo;
 
-    SoundManager sound;
-
-    void Start()
-    {
-        sound = FindObjectOfType(typeof(SoundManager)) as SoundManager;
-    }
 
 	public void setSwap(swap inSwaper)
 	{
@@ -40,9 +34,10 @@ public class bulHit : MonoBehaviour {
 	{
 		if(this.gameObject.tag == "standerdBulletG")
 		{
+			Debug.Log("standerdBulletG");
 			Instantiate (expo, this.gameObject.transform.position, this.gameObject.transform.rotation);
-            sound.PlayPlayerGrenade();
-        }
+			expo.Play();
+		}
 	}
 
 }

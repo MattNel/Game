@@ -12,41 +12,34 @@ public class weapon : MonoBehaviour {
 	public Transform bullit;
 	public Transform bullitG;
 	public swap swaper;
+	public AudioSource shootSound;
 	float fireRateG = 0.7f;
 
 	Transform point;
-	public float timeToFire = 0;
+	float timeToFire = 0;
 	float timeToFireG = 0;
-
-    SoundManager sound;
 
 	void Start () {
 		point = transform.FindChild ("point");
-        sound = FindObjectOfType(typeof(SoundManager)) as SoundManager;
-    }
+	}
 	
 	// Update is called once per frame
-	public void Update () {
+	void Update () {
 		if (Input.GetButton ("Fire1") && Time.time > timeToFire) {
 			timeToFire = Time.time + 1 / fireRate;
 			Shoot ();
-            sound.PlayPlayerFire();
-        } else
+			shootSound.Play();
+		} else
 		if(Input.GetButton ("Granade") && Time.time > timeToFireG){
 			timeToFireG = Time.time + 1 / fireRateG;
 			ShootGra();
 		}
 
-
-
 		if(Input.GetButtonDown ("Fire2"))
 		{
 			swaper.swapIt();
-            sound.PlayPlayerSwap();
-        }
-
+		}
 	}
-
 
 	void Shoot()
 	{

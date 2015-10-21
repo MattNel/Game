@@ -3,8 +3,10 @@ using System.Collections;
 
 public class PauseMenu : MonoBehaviour {
 
+	public GameObject player;
 	public GameObject pauseM;
 	private bool paused = false;
+	public AudioSource pauseSound;
 	// Use this for initialization
 	void Start () {
 		pauseM.SetActive (false);
@@ -19,9 +21,12 @@ public class PauseMenu : MonoBehaviour {
 		if (paused) {
 			pauseM.SetActive (true);
 			Time.timeScale = 0;
+			player.SetActive(false);
 		} else {
+			player.SetActive(true);
 			pauseM.SetActive (false);
 			Time.timeScale = 1;
+			pauseSound.Play ();
 		}
 	}
 	

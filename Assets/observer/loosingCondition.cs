@@ -4,16 +4,17 @@ using System.Collections;
 public class loosingCondition : MonoBehaviour {
 
 	public int health;
+	//float barUnit = 199f;
 	public GameObject thePlayer;
-	float barUnit = 199f;
 	public RectTransform bar;
-    SoundManager sound;
+	public AudioSource damageSound;
 
 	void Start () {
 		if(health == 0)
 		{
 			health = 5;
 		}
+		//barUnit = 199;
 	}
 	
 	// Update is called once per frame
@@ -21,14 +22,16 @@ public class loosingCondition : MonoBehaviour {
 		if(health<0)
 		{
 			Destroy(thePlayer);
-			Application.LoadLevel("level3");
+			//Application.LoadLevel("level3");
 		}
 	}
+
+
 
 	public void damage()
 	{
 		health--;
-		bar.sizeDelta = new Vector2 ((barUnit -= 39.8f), 27);
-        //sound.PlayPlayerDamage();
+		//bar.sizeDelta = new Vector2 ((barUnit -= 39.8f),27);
+		//damageSound.Play ();
 	}
 }
