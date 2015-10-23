@@ -81,9 +81,14 @@ public class PauseMenu : MonoBehaviour {
 		/*************************/
 
 	}
+	public void next()
+	{
+		int i = Application.loadedLevel;
+		Application.LoadLevel (i + 1);
+	}
 
 	public void Retry(){
-		Application.LoadLevel ("Puzzle1");
+		Application.LoadLevel (Application.loadedLevel);
 	}
 	public void Resume(){
 		paused = false;

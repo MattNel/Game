@@ -87,6 +87,10 @@ public class MenuScript : MonoBehaviour {
 		//paused = false;
 		Application.Quit ();
 	}
+
+	public void LoadTut(){
+		Application.LoadLevel("tut3");
+	}
 	
 	public void Back(){
 		//menuM.SetActive (true);
