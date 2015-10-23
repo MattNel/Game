@@ -25,7 +25,7 @@ public class weaponAI : MonoBehaviour {
 		if(Time.time > timeToFire)
 		{
 			timeToFire = Time.time + 1/fireRate;
-            Debug.Log("WTD");
+            //sDebug.Log("WTD");
 			Shoot ();
 		}
 	}

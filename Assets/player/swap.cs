@@ -35,12 +35,12 @@ namespace UnityStandardAssets._2D
 		{
 			if(target != null)
 			{
-				//effect1.transform.position = player.transform.position;
+				effect1.transform.position = player.transform.position;
 				//Swap effects
-				//effect1.Play ();
+				effect1.Play ();
 
-				//effect2.transform.position = target.transform.position;
-				//effect2.Play ();
+				effect2.transform.position = target.transform.position;
+				effect2.Play ();
 				//Swap sound
 				//swapSound = this.GetComponent<AudioSource>();
 				//swapSound.Play();

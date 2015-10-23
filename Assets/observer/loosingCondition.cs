@@ -21,7 +21,7 @@ public class loosingCondition : MonoBehaviour {
 	void Update () {
 		if(health<0)
 		{
-			Destroy(thePlayer);
+			thePlayer.SetActive(false);
 			//Application.LoadLevel("level3");
 		}
 	}
