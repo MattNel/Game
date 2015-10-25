@@ -6,6 +6,7 @@ public class bulHit : MonoBehaviour {
 
 	swap swaper;
 	public ParticleSystem expo;
+	//enemy_short_move hitLeopard ;
 
 
 	public void setSwap(swap inSwaper)
@@ -27,7 +28,15 @@ public class bulHit : MonoBehaviour {
 				swaper.setTarget (col.gameObject, null);
 			Instantiate (expo, this.gameObject.transform.position, this.gameObject.transform.rotation);
 				expo.Play();
+			/*if(col.gameObject.layer == 11)
+			{
+				hitLeopard = (enemy_short_move)col.gameObject.GetComponentInChildren(typeof(enemy_short_move));
+
+				hitLeopard.hitL();
+			}*/
 		}
+
+
 	}
 
 	void OnDestroy()

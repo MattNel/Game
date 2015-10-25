@@ -8,12 +8,14 @@ public class loosingCondition : MonoBehaviour {
 	public GameObject thePlayer;
 	public RectTransform bar;
 	public AudioSource damageSound;
+	public Animator anim;
 
 	void Start () {
 		if(health == 0)
 		{
 			health = 5;
 		}
+		anim = thePlayer.GetComponent<Animator>();
 		//barUnit = 199;
 	}
 	
@@ -21,7 +23,8 @@ public class loosingCondition : MonoBehaviour {
 	void Update () {
 		if(health<0)
 		{
-			thePlayer.SetActive(false);
+			anim.SetBool("Dead",true);
+			//thePlayer.SetActive(false);
 			//Application.LoadLevel("level3");
 		}
 	}

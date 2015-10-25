@@ -57,7 +57,7 @@ public class PauseMenu : MonoBehaviour {
 		if (dead) {
 			//while(gO.alpha <1)
 			//{
-			gO.alpha +=  Time.deltaTime ;
+			gO.alpha +=  Time.deltaTime/1.3f ;
 			
 			//Play death sound here
 		}
