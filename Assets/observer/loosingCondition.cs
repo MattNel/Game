@@ -11,12 +11,13 @@ public class loosingCondition : MonoBehaviour {
 
     private GameObject sounds;
     private tut3Sound tut3sound;
+	private bool cantDie = false;
 
         void Start () {
         sounds = GameObject.FindGameObjectWithTag("SoundManager");
         tut3sound = sounds.GetComponent<tut3Sound>();
 
-        if (health == 0)
+        if (health >= 0)
 		{
 			health = 5;
 		}
@@ -27,17 +28,20 @@ public class loosingCondition : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(health<0)
+		if(health<=0&&!cantDie)
 		{
-			anim.SetBool("Dead",true);
-			//thePlayer.SetActive(false);
-			//Application.LoadLevel("level3");
+			//Destroy(thePlayer);
+			Application.LoadLevel(Application.loadedLevel);
+		}
+
+		if (Input.GetButton ("god")) {
+			toggleNOKILL();
 		}
 	}
 
 	public void toggleNOKILL()
 	{
-		//cantDie = !cantDie;
+		cantDie = !cantDie;
 	}
 
 	public void damage()
