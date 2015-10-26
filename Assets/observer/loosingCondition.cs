@@ -37,7 +37,7 @@ public class loosingCondition : MonoBehaviour {
 
 	public void toggleNOKILL()
 	{
-		cantDie = !cantDie;
+		//cantDie = !cantDie;
 	}
 
 	public void damage()

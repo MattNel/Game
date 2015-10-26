@@ -14,7 +14,7 @@ public class enemy_short_move : MonoBehaviour {
 	private Rigidbody2D m_Rigidbody2D;
 	void Start () {
 		m_Side = new Transform[2];
-		target = GameObject.Find ("player");
+		target = GameObject.FindGameObjectWithTag ("Player");
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
 		theObserver = (loosingCondition) GameObject.Find("observer").GetComponent(typeof(loosingCondition));
 		child_1 = this.transform.GetChild(0);

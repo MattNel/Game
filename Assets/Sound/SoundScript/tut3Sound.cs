@@ -5,8 +5,16 @@ public class tut3Sound : MainMenuSoundManager {
 
 	// Use this for initialization
 	void Start () {
-	
-	}
+        EnterSound.volume = (InterfaceSound / 10f);
+        HoverSound.volume = (InterfaceSound / 10f);
+
+        shootSound.volume = (EffectsSound / 10f);
+        swapSound.volume = (EffectsSound / 10f);
+        grenadeSound.volume = (EffectsSound / 10f);
+        grenadeFallSound.volume = (EffectsSound / 10f);
+        runSound.volume = (EffectsSound / 10f);
+        damageSound.volume = (EffectsSound / 10f);
+    }
 
     // Update is called once per frame
     void Update()
@@ -17,52 +25,8 @@ public class tut3Sound : MainMenuSoundManager {
 
         if (Input.GetKeyUp("a")|| Input.GetKeyUp("d") || Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow))
             playRunStop();
-    }
 
-    public AudioSource shootSound;
-    public AudioSource swapSound;
-    public AudioSource grenadeSound;
-    public AudioSource grenadeFallSound;
-    public AudioSource runSound;
-    public AudioSource damageSound;
 
-    public void playShoot()
-    {
-        shootSound.Play();
-    }
 
-    public void playSwap()
-    {
-        swapSound.Play();
-    }
-
-    public void playGrenade()
-    {
-        grenadeSound.Play();
-    }
-
-    public void playGrenadeFall()
-    {
-        grenadeFallSound.Play();
-    }
-
-    public void playGrenadeFallStop()
-    {
-        grenadeFallSound.Stop();
-    }
-
-    public void playRun()
-    {
-        runSound.Play();
-    }
-
-    public void playRunStop()
-    {
-        runSound.Stop();
-    }
-
-    public void playDamage()
-    {
-        damageSound.Play();
     }
 }
