@@ -10,7 +10,6 @@ public class weaponAI : MonoBehaviour {
 	public float hitRadius;
 	public LayerMask tohit;
 	public Transform bullit;
-	public AudioSource enemyShootSound;
 	private bool agro = false;
 
 	Transform point;
@@ -35,7 +34,6 @@ public class weaponAI : MonoBehaviour {
 		Transform temp = Instantiate (bullit, point.position, point.rotation) as Transform;
 		GameObject temp1 = temp.gameObject;
 		temp1.layer = 12;
-		enemyShootSound.Play ();
 	}
 
 	public void setAgroTrue()

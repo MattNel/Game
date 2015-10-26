@@ -7,7 +7,6 @@ public class loosingCondition : MonoBehaviour {
 	float barUnit = 199f;
 	public GameObject thePlayer;
 	public RectTransform bar;
-	public AudioSource damageSound;
 	public Animator anim;
 
     private GameObject sounds;
