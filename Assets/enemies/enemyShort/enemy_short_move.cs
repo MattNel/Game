@@ -8,38 +8,29 @@ public class enemy_short_move : MonoBehaviour {
 	private bool facing_left = true;
 	Transform child_1;
 	Transform child_2;
-	//detectHit diamond;
-	//bool hit = false;
-	//bool hitLeopard = false;
+	private Transform[] m_Side;
+	[SerializeField] private LayerMask m_WhatIsGround;
 	//private bool m_FacingLeft = true; 
 	private Rigidbody2D m_Rigidbody2D;
 	void Start () {
-		target = GameObject.FindGameObjectWithTag ("Player");
+		m_Side = new Transform[2];
+		target = GameObject.Find ("player");
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
 		theObserver = (loosingCondition) GameObject.Find("observer").GetComponent(typeof(loosingCondition));
 		child_1 = this.transform.GetChild(0);
 		child_2 = this.transform.GetChild(1);
+
+		m_Side[0] = transform.Find("LeftCheck");
+		m_Side[1] = transform.Find("RightCheck");
+
 		BoxCollider2D temp = child_2.GetComponent <BoxCollider2D> ();
 		temp.enabled = false;
-		//diamond = (detectHit)this.transform.GetChild (2).GetComponent(typeof(detectHit));
+
 		SpriteRenderer spt = child_2.GetComponent <SpriteRenderer> ();
 		spt.enabled = false;
 	}
-	/*public void hitL()
-	{
-		hitLeopard = true;
-	}*/
+
 	void Update () {
-		/****Switch On Diamond******
-		if (!hit || Input.GetMouseButton (0)) {
-			hit = false;
-			diamond.offDia();
-		} else if (hitLeopard) 
-		{
-			diamond.onDia();
-			hitLeopard = false;
-		}
-		***************************/
 		BoxCollider2D temp = child_1.GetComponent <BoxCollider2D> ();
 		temp.enabled = false;
 		
@@ -71,7 +62,7 @@ public class enemy_short_move : MonoBehaviour {
 			
 			float rotz = Mathf.Atan2 (difference.y, difference.x) * Mathf.Rad2Deg;
 
-			if (transform.position.x < target.transform.position.x + 2 && transform.position.x > target.transform.position.x - 2) {
+			if (transform.position.x < target.transform.position.x + 5 && transform.position.x > target.transform.position.x - 5) {
 				m_Rigidbody2D.velocity = new Vector2 (0, 0);
                 if(true)
                 {
@@ -83,7 +74,7 @@ public class enemy_short_move : MonoBehaviour {
 
 				m_Rigidbody2D.velocity = new Vector2 (m_Rigidbody2D.velocity.x - 0.5f, m_Rigidbody2D.velocity.y);
 			} else
-				if ((rotz < 90 && rotz > -90)) {
+			if ((rotz < 90 && rotz > -90)) {
 
 				m_Rigidbody2D.velocity = new Vector2 (m_Rigidbody2D.velocity.x + 0.5f, m_Rigidbody2D.velocity.y);
 			}
@@ -117,7 +108,7 @@ public class enemy_short_move : MonoBehaviour {
 			SpriteRenderer spt1 = child_2.GetComponent <SpriteRenderer> ();
 			spt1.enabled = false;
 
-			m_Rigidbody2D.velocity = new Vector2 (0, 0);
+			m_Rigidbody2D.velocity = new Vector2 (0, m_Rigidbody2D.velocity.y);
 		}
 	}
 
@@ -130,4 +121,5 @@ public class enemy_short_move : MonoBehaviour {
 	{
 		agro = false;
 	}
+	
 }

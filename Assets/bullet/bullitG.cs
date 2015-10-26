@@ -4,6 +4,7 @@ using System.Collections;
 public class bullitG : MonoBehaviour {
 
 	//float movement_speed = 70;
+	public GameObject explosion;
 	bool direction = true;
 
 	void Start ()
@@ -20,5 +21,10 @@ public class bullitG : MonoBehaviour {
 	
 	public void changeMovement(){
 		direction = !direction;
+	}
+
+	void OnDestroy()
+	{
+		Instantiate (explosion, this.gameObject.transform.position, this.gameObject.transform.rotation);
 	}
 }

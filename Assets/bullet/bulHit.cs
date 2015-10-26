@@ -29,21 +29,13 @@ public class bulHit : MonoBehaviour {
 			Instantiate (expo, this.gameObject.transform.position, this.gameObject.transform.rotation);
 			expo.Play();
 		} else
-		if (col.gameObject.layer == 11||col.gameObject.layer == 12) {
+		if (col.gameObject.layer == 11||col.gameObject.layer == 12||col.gameObject.layer == 16) {
 				
 				Destroy (gameObject);
 				swaper.setTarget (col.gameObject, null);
-			Instantiate (expo, this.gameObject.transform.position, this.gameObject.transform.rotation);
+				Instantiate (expo, this.gameObject.transform.position, this.gameObject.transform.rotation);
 				expo.Play();
-			/*if(col.gameObject.layer == 11)
-			{
-				hitLeopard = (enemy_short_move)col.gameObject.GetComponentInChildren(typeof(enemy_short_move));
-
-				hitLeopard.hitL();
-			}*/
 		}
-
-
 	}
 
 	void OnDestroy()

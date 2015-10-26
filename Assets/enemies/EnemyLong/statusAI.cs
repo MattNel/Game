@@ -28,7 +28,7 @@ public class statusAI : MonoBehaviour {
 			shooting = false;
 			anm.SetBool("shooting", shooting);
 			anm.SetBool("dead", dead);
-			//Destroy (this.gameObject);
+			Destroy (this.gameObject);
 		} else {
 			anm.SetBool("shooting", shooting);
 			anm.SetBool("idol", idol);

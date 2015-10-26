@@ -35,12 +35,20 @@ public class loosingCondition : MonoBehaviour {
 		}
 	}
 
-
+	public void toggleNOKILL()
+	{
+		cantDie = !cantDie;
+	}
 
 	public void damage()
 	{
 		health--;
 		bar.sizeDelta = new Vector2 ((barUnit -= 39.8f),27);
 		//damageSound.Play ();
+	}
+	
+		public void kill()
+	{
+		health = 0;
 	}
 }
