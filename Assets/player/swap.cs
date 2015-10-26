@@ -25,7 +25,6 @@ namespace UnityStandardAssets._2D
 			butScript = inButScript;
 		}
 		
-		public AudioSource swapSound;
 		public ParticleSystem effect1;
 		public ParticleSystem effect2;
 		Vector3 currLocation;

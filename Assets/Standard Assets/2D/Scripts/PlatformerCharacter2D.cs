@@ -21,7 +21,7 @@ namespace UnityStandardAssets._2D
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 
 		Transform playerGraphics;
-
+     
         private void Awake()
         {
             // Setting up references.

@@ -3,9 +3,10 @@ using System.Collections;
 
 public class explode : MonoBehaviour {
 
-	void Start () {
+        void Start () {
 		Destroy (gameObject,1);
-	}
+
+    }
 
 	void OnTriggerStay2D (Collider2D col)
 	{

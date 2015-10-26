@@ -5,6 +5,8 @@ using UnityStandardAssets._2D;
 
 public class weapon : MonoBehaviour {
 
+
+
 	public float fireRate;
 	public float damage;
 	public float hitRadius;
@@ -12,32 +14,39 @@ public class weapon : MonoBehaviour {
 	public Transform bullit;
 	public Transform bullitG;
 	public swap swaper;
-	public AudioSource shootSound;
 	float fireRateG = 0.7f;
 
 	Transform point;
 	float timeToFire = 0;
 	float timeToFireG = 0;
 
-	void Start () {
+    private GameObject sounds;
+    private tut3Sound tut3sound;
+
+    void Start () {
 		point = transform.FindChild ("point");
-	}
+
+        sounds = GameObject.FindGameObjectWithTag("SoundManager");
+        tut3sound = sounds.GetComponent<tut3Sound>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetButton ("Fire1") && Time.time > timeToFire) {
 			timeToFire = Time.time + 1 / fireRate;
 			Shoot ();
-			shootSound.Play();
-		} else
+            tut3sound.playShoot();
+        } else
 		if(Input.GetButton ("Granade") && Time.time > timeToFireG){
 			timeToFireG = Time.time + 1 / fireRateG;
 			ShootGra();
+            tut3sound.playGrenadeFall();
 		}
 
 		if(Input.GetButtonDown ("Fire2"))
 		{
 			swaper.swapIt();
+            tut3sound.playSwap();
 		}
 	}
 
