@@ -8,6 +8,9 @@ public class enemy_short_move : MonoBehaviour {
 	private bool facing_left = true;
 	Transform child_1;
 	Transform child_2;
+	//detectHit diamond;
+	//bool hit = false;
+	//bool hitLeopard = false;
 	//private bool m_FacingLeft = true; 
 	private Rigidbody2D m_Rigidbody2D;
 	void Start () {
@@ -18,12 +21,25 @@ public class enemy_short_move : MonoBehaviour {
 		child_2 = this.transform.GetChild(1);
 		BoxCollider2D temp = child_2.GetComponent <BoxCollider2D> ();
 		temp.enabled = false;
-
+		//diamond = (detectHit)this.transform.GetChild (2).GetComponent(typeof(detectHit));
 		SpriteRenderer spt = child_2.GetComponent <SpriteRenderer> ();
 		spt.enabled = false;
 	}
-
+	/*public void hitL()
+	{
+		hitLeopard = true;
+	}*/
 	void Update () {
+		/****Switch On Diamond******
+		if (!hit || Input.GetMouseButton (0)) {
+			hit = false;
+			diamond.offDia();
+		} else if (hitLeopard) 
+		{
+			diamond.onDia();
+			hitLeopard = false;
+		}
+		***************************/
 		BoxCollider2D temp = child_1.GetComponent <BoxCollider2D> ();
 		temp.enabled = false;
 		

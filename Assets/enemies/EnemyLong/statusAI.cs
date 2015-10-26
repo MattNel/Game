@@ -8,7 +8,9 @@ public class statusAI : MonoBehaviour {
 	bool dead = false;
 	bool idol = false;
 	private Animator anm;  
-
+	void Awake(){
+		anm = GetComponent<Animator>();
+	}
 	void Start () {
 		anm = GetComponent<Animator>();
 		if(health == 0)
@@ -26,7 +28,7 @@ public class statusAI : MonoBehaviour {
 			shooting = false;
 			anm.SetBool("shooting", shooting);
 			anm.SetBool("dead", dead);
-			Destroy (this.gameObject);
+			//Destroy (this.gameObject);
 		} else {
 			anm.SetBool("shooting", shooting);
 			anm.SetBool("idol", idol);

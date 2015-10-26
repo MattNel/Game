@@ -7,6 +7,8 @@ public class loosingCondition : MonoBehaviour {
 	float barUnit = 199f;
 	public GameObject thePlayer;
 	public RectTransform bar;
+	public AudioSource damageSound;
+	public Animator anim;
 
     private GameObject sounds;
     private tut3Sound tut3sound;
@@ -20,13 +22,16 @@ public class loosingCondition : MonoBehaviour {
 			health = 5;
 		}
 		barUnit = 199;
+		anim = thePlayer.GetComponent<Animator>();
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if(health<0)
 		{
-			thePlayer.SetActive(false);
+			anim.SetBool("Dead",true);
+			//thePlayer.SetActive(false);
 			//Application.LoadLevel("level3");
 		}
 	}
