@@ -10,12 +10,12 @@ public class loosingCondition : MonoBehaviour {
 	public Animator anim;
 
     private GameObject sounds;
-    private tut3Sound tut3sound;
+    private MainMenuSoundManager tut3sound;
 	private bool cantDie = false;
 
         void Start () {
         sounds = GameObject.FindGameObjectWithTag("SoundManager");
-        tut3sound = sounds.GetComponent<tut3Sound>();
+        tut3sound = sounds.GetComponent<MainMenuSoundManager>();
 
         if (health >= 0)
 		{

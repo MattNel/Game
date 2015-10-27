@@ -14,6 +14,10 @@ public class tut3Sound : MainMenuSoundManager {
         grenadeFallSound.volume = (EffectsSound / 10f);
         runSound.volume = (EffectsSound / 10f);
         damageSound.volume = (EffectsSound / 10f);
+
+        Enemy1Sound.volume = (EffectsSound / 10f);
+        Enemy2Sound.volume = (EffectsSound / 10f);
+        CrateSound.volume = (EffectsSound / 10f);
     }
 
     // Update is called once per frame

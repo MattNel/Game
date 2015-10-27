@@ -71,6 +71,11 @@ public class MainMenuSoundManager : MonoBehaviour {
     public AudioSource runSound;
     public AudioSource damageSound;
 
+    public AudioSource Enemy1Sound;
+    public AudioSource Enemy2Sound;
+    public AudioSource CrateSound;
+
+
     public void PlaySoundHover()
     {
         HoverSound.Play();
@@ -119,5 +124,20 @@ public class MainMenuSoundManager : MonoBehaviour {
     public void playDamage()
     {
         damageSound.Play();
+    }
+
+    public void playEnemy1()
+    {
+        Enemy1Sound.Play();
+    }
+
+    public void playEnemy2()
+    {
+        Enemy2Sound.Play();
+    }
+
+    public void playCrate()
+    {
+        CrateSound.Play();
     }
 }
