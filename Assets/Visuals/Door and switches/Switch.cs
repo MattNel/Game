@@ -39,7 +39,7 @@ public class Switch : MonoBehaviour {
 		if (door.transform.position.y > 104.7 && !button) {
 			door.transform.Translate(Vector3.down * Time.deltaTime, Space.World);
 		}
-		if (switchB.transform.position.y < -126.02 && !button) {
+		if (switchB.transform.position.y < -128.02 && !button) {
 			switchB.transform.Translate(Vector3.up * Time.deltaTime, Space.World);
 		}
 

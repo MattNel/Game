@@ -11,7 +11,7 @@ public class bullitG : MonoBehaviour {
 	{
 		Vector2 dir =  Camera.main.ScreenToWorldPoint (Input.mousePosition) - gameObject.transform.position;
 		dir.Normalize();
-		GetComponent<Rigidbody2D>().AddForce(dir*50f, ForceMode2D.Impulse);
+		GetComponent<Rigidbody2D>().AddForce(dir*70f, ForceMode2D.Impulse);
 		Destroy (this.gameObject, 5);
 	}
 

@@ -82,7 +82,7 @@ namespace UnityStandardAssets._2D
 		{
 			Transform temp = tar.transform;
 			Transform pre = null;
-			while(temp != null)
+			while(temp != null&&temp.gameObject.layer != 0)
 			{
 				pre = temp;
 				temp = temp.transform.parent;
