@@ -75,7 +75,7 @@ using UnityStandardAssets.CrossPlatformInput;
 			Collider2D[] colliders = Physics2D.OverlapCircleAll(m_Side[0].position, k_GroundedRadius, m_WhatIsGround);
 			for (int i = 0; i < colliders.Length; i++)
 			{
-			if (colliders[i].gameObject != gameObject && colliders[i].gameObject.layer != 11 && colliders[i].gameObject.layer != 15&&colliders[i].gameObject.layer != 17)
+			if (colliders[i].gameObject != gameObject && colliders[i].gameObject.layer != 11&& colliders[i].gameObject.layer != 9 && colliders[i].gameObject.layer != 15&&colliders[i].gameObject.layer != 17)
 				{
                     return true;
 				}
@@ -88,7 +88,7 @@ using UnityStandardAssets.CrossPlatformInput;
 			Collider2D[] colliders = Physics2D.OverlapCircleAll(m_Side[1].position, k_GroundedRadius, m_WhatIsGround);
 			for (int i = 0; i < colliders.Length; i++)
 			{
-			    if (colliders[i].gameObject != gameObject&&colliders[i].gameObject.layer != 11&&colliders[i].gameObject.layer != 15&&colliders[i].gameObject.layer != 17)
+			if (colliders[i].gameObject != gameObject&&colliders[i].gameObject.layer != 11&& colliders[i].gameObject.layer != 9&&colliders[i].gameObject.layer != 15&&colliders[i].gameObject.layer != 17)
 			    {
                         return true;
                 }

@@ -31,7 +31,7 @@ public class loosingCondition : MonoBehaviour {
 		if(health<=0&&!cantDie)
 		{
 			//Destroy(thePlayer);
-			Application.LoadLevel(Application.loadedLevel);
+			//Application.LoadLevel(Application.loadedLevel);
 		}
 
 		if (Input.GetButton ("god")) {
