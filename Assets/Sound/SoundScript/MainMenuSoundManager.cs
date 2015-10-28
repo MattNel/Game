@@ -77,6 +77,13 @@ public class MainMenuSoundManager : MonoBehaviour {
     public AudioSource JumpSound;
     public AudioSource JumpLandSound;
 
+    public AudioSource mainMenu;
+    public AudioSource lvl1;
+    public AudioSource lvl2;
+    public AudioSource lvl3;
+    public AudioSource lvl4;
+
+
     public void PlaySoundHover()
     {
         HoverSound.Play();
