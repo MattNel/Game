@@ -43,6 +43,10 @@ public class tut3Sound : MainMenuSoundManager {
         {
             playJump();
         }
+        if(Input.GetKeyDown("p"))
+        {
+            playPause();
+        }
         
        /* if (pp.landed == true)
             playJumpLand();*/

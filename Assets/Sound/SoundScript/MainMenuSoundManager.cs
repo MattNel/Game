@@ -90,6 +90,8 @@ public class MainMenuSoundManager : MonoBehaviour {
     public AudioSource lvl3;
     public AudioSource lvl4;
 
+    public AudioSource pauseSound;
+
 
     public void PlaySoundHover()
     {
@@ -211,5 +213,9 @@ public class MainMenuSoundManager : MonoBehaviour {
         lvl3.Stop();
         lvl4.Play();
         lvl4.loop = true;
+    }
+    public void playPause()
+    {
+        pauseSound.Play();
     }
 }
