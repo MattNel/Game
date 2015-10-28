@@ -88,9 +88,20 @@ public class MenuScript : MonoBehaviour {
 		Application.Quit ();
 	}
 
-	public void LoadTut(){
+	public void Load1(){
 		Application.LoadLevel("tut3");
 	}
+	public void Load2(){
+		Application.LoadLevel("puzzle1");
+	}
+	public void Load3(){
+		Application.LoadLevel("crate_falling");
+	}
+	
+	public void LoadTut(){
+		Application.LoadLevel("lvl1");
+	}
+
 	
 	public void Back(){
 		//menuM.SetActive (true);
