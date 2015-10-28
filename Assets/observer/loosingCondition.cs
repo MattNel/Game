@@ -10,21 +10,21 @@ public class loosingCondition : MonoBehaviour {
 	public Animator anim;
 
     private GameObject sounds;
-    private MainMenuSoundManager tut3sound;
+    private tut3Sound tut3sound;
 	private bool cantDie = false;
 
-        void Start () {
-        sounds = GameObject.FindGameObjectWithTag("SoundManager");
-        tut3sound = sounds.GetComponent<MainMenuSoundManager>();
+        void Start ()
+        {
+            sounds = GameObject.FindGameObjectWithTag("SoundManager");
+            tut3sound = sounds.GetComponent<tut3Sound>();
 
-        if (health >= 0)
-		{
-			health = 5;
-		}
-		barUnit = 199;
-		anim = thePlayer.GetComponent<Animator>();
-
-	}
+            if (health >= 0)
+		    {
+			    health = 20;
+		    }
+		    barUnit = 199;
+		    anim = thePlayer.GetComponent<Animator>();
+        }
 	
 	// Update is called once per frame
 	void Update () {
@@ -48,7 +48,7 @@ public class loosingCondition : MonoBehaviour {
 	{
 		health--;
 		bar.sizeDelta = new Vector2 ((barUnit -= 39.8f),27);
-		//damageSound.Play ();
+		tut3sound.playDamage();
 	}
 	
 		public void kill()

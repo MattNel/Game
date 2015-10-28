@@ -30,8 +30,7 @@ using UnityEngine;
 		private void FixedUpdate()
 		{
 
-		}
-				
+		}	
 		public void Move(float move, bool jump, bool m_Grounded)
 		{
 			m_Anim.SetBool("Ground", m_Grounded);
@@ -53,6 +52,8 @@ using UnityEngine;
 			} else 
 				if(m_Grounded)
 			{
+
+
 				if(m_Rigidbody2D.velocity.x > 0)
 				{
 					m_Anim.SetFloat ("Speed", 0f);
@@ -68,6 +69,8 @@ using UnityEngine;
 			if (m_Grounded && jump && m_Anim.GetBool ("Ground")) {
 				m_Anim.SetBool ("Ground", m_Grounded);
 				m_Rigidbody2D.AddForce (new Vector2 (0f, 1500f));
+
+
 			} 
 		}
 		

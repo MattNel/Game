@@ -11,7 +11,7 @@ public class sencor_follow : MonoBehaviour {
 
 
 
-        void Start () {
+    void Start () {
         sound = GameObject.FindGameObjectWithTag("SoundManager");
         tut3sound = sound.GetComponent<tut3Sound>();
 

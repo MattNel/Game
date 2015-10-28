@@ -18,9 +18,13 @@ public class tut3Sound : MainMenuSoundManager {
         Enemy1Sound.volume = (EffectsSound / 10f);
         Enemy2Sound.volume = (EffectsSound / 10f);
         CrateSound.volume = (EffectsSound / 10f);
+        JumpSound.volume = (EffectsSound / 10f);
+        JumpLandSound.volume = (EffectsSound / 10f);
     }
 
     // Update is called once per frame
+    p2uc pp;
+
     void Update()
     {
         
@@ -30,7 +34,12 @@ public class tut3Sound : MainMenuSoundManager {
         if (Input.GetKeyUp("a")|| Input.GetKeyUp("d") || Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow))
             playRunStop();
 
-
-
+        if(Input.GetKeyDown("space"))
+        {
+            playJump();
+        }
+        
+       /* if (pp.landed == true)
+            playJumpLand();*/
     }
 }

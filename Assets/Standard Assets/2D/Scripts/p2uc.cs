@@ -4,10 +4,11 @@ using UnityStandardAssets.CrossPlatformInput;
 
 //namespace UnityStandardAssets._2D
 //{
-	[RequireComponent(typeof (Platformer2dChar))]
+[RequireComponent(typeof (Platformer2dChar))]
 	public class p2uc : MonoBehaviour
 	{
-	private Platformer2dChar m_Character;
+
+	    private Platformer2dChar m_Character;
 		private bool m_Jump;
 		private Transform m_GroundCheck;
 		private Transform[] m_Side; // A position marking where to check if the player is grounded.
@@ -15,9 +16,11 @@ using UnityStandardAssets.CrossPlatformInput;
 		private bool m_Grounded;            // Whether or not the player is grounded.
 		//private Transform m_CeilingCheck;   // A position marking where to check for ceilings
 		const float k_CeilingRadius = .01f; // Radius of the overlap circle to determine if the player can stand up
-		[SerializeField] private LayerMask m_WhatIsGround; 
-		
-		private void Awake()
+		[SerializeField] private LayerMask m_WhatIsGround;
+
+
+
+    private void Awake()
 		{
 			m_Side = new Transform[2];
 			m_GroundCheck = transform.Find("GroundCheck");
@@ -25,9 +28,15 @@ using UnityStandardAssets.CrossPlatformInput;
 			m_Side[0] = transform.Find("LeftCheck");
 			m_Side[1] = transform.Find("RightCheck");
 			m_Character = GetComponent<Platformer2dChar>();
+            
 		}
-		
-		
+
+    void Start()
+    {
+        landed = false;
+    }
+
+   public bool landed;
 		private void Update()
 		{
 			if (!m_Jump)
@@ -63,8 +72,10 @@ using UnityStandardAssets.CrossPlatformInput;
 			Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
 			for (int i = 0; i < colliders.Length; i++)
 			{
-				if (colliders[i].gameObject != gameObject)
-					return true;
+                if (colliders[i].gameObject != gameObject)
+                {
+                    return true;
+                }
 			}
 			
 			return false;
@@ -90,10 +101,11 @@ using UnityStandardAssets.CrossPlatformInput;
 			{
 			if (colliders[i].gameObject != gameObject&&colliders[i].gameObject.layer != 11&& colliders[i].gameObject.layer != 9&&colliders[i].gameObject.layer != 15&&colliders[i].gameObject.layer != 17)
 			    {
+                        landed = false;
                         return true;
                 }
 			}
-			
+            landed = true;
 			return false;
 		}
 	}

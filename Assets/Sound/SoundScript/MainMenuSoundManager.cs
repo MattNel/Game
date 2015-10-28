@@ -74,7 +74,8 @@ public class MainMenuSoundManager : MonoBehaviour {
     public AudioSource Enemy1Sound;
     public AudioSource Enemy2Sound;
     public AudioSource CrateSound;
-
+    public AudioSource JumpSound;
+    public AudioSource JumpLandSound;
 
     public void PlaySoundHover()
     {
@@ -139,5 +140,13 @@ public class MainMenuSoundManager : MonoBehaviour {
     public void playCrate()
     {
         CrateSound.Play();
+    }
+    public void playJump()
+    {
+        JumpSound.Play();
+    }
+    public void playJumpLand()
+    {
+        JumpLandSound.Play();
     }
 }
