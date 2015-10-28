@@ -47,7 +47,7 @@ public class loosingCondition : MonoBehaviour {
 	public void damage()
 	{
 		health--;
-		bar.sizeDelta = new Vector2 ((barUnit -= 39.8f),27);
+		bar.sizeDelta = new Vector2 ((barUnit -= 9.95f),27);
 		tut3sound.playDamage();
 	}
 	
