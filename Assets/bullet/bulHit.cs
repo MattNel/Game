@@ -8,7 +8,9 @@ public class bulHit : MonoBehaviour {
 	public ParticleSystem expo;
     private GameObject sounds;
     private tut3Sound tut3sound;
-	//enemy_short_move hitLeopard ;
+    //enemy_short_move hitLeopard ;
+
+
 
     public void Start()
     {
@@ -35,7 +37,12 @@ public class bulHit : MonoBehaviour {
 				swaper.setTarget (col.gameObject, null);
 				Instantiate (expo, this.gameObject.transform.position, this.gameObject.transform.rotation);
 				expo.Play();
-		}
+                if(col.gameObject.layer == 16)
+                {
+                    tut3sound.playCrate();
+                }
+
+        }
 	}
 
 	void OnDestroy()

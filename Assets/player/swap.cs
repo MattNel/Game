@@ -40,9 +40,6 @@ namespace UnityStandardAssets._2D
 
 				effect2.transform.position = target.transform.position;
 				effect2.Play ();
-				//Swap sound
-				//swapSound = this.GetComponent<AudioSource>();
-				//swapSound.Play();
 				
 				////////////////////Adding force in direction of swap/////////////
 				currLocation = player.transform.position; 
@@ -56,9 +53,8 @@ namespace UnityStandardAssets._2D
 				this.transform.parent.position = tempPar.transform.position;
 				tempPar.transform.position = temp;
 
-
-				///////////////Adding force in direction of swap/////////////////
-				player.GetComponentInParent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
+                ///////////////Adding force in direction of swap/////////////////
+                player.GetComponentInParent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
 				player.GetComponentInParent<Rigidbody2D>().AddForce(getDirection(player,target)*50f,ForceMode2D.Impulse);
 				//Debug.Log ("This is direction: "+direction);
 				/////////////////////////////////////////////////////////////////

@@ -6,8 +6,16 @@ public class sencor_follow : MonoBehaviour {
 	private Transform enemy;
 	private enemy_short_move scrpo;
 
-	void Start () {
-		enemy = this.transform.parent.FindChild("enemy");
+    GameObject sound;
+    private tut3Sound tut3sound;
+
+
+
+        void Start () {
+        sound = GameObject.FindGameObjectWithTag("SoundManager");
+        tut3sound = sound.GetComponent<tut3Sound>();
+
+        enemy = this.transform.parent.FindChild("enemy");
 		scrpo = (enemy_short_move) enemy.gameObject.GetComponent (typeof(enemy_short_move));
 	}
 
@@ -20,7 +28,8 @@ public class sencor_follow : MonoBehaviour {
 		if(col.gameObject.layer == 9)
 		{
 			scrpo.setAgroTrue ();
-		}
+            tut3sound.playEnemy2();
+        }
 			
 	}
 

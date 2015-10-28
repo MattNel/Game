@@ -14,9 +14,14 @@ public class weaponAI : MonoBehaviour {
 
 	Transform point;
 	float timeToFire = 0;
-	
-	void Start () {
-		point = transform.FindChild ("point");
+
+    GameObject sound;
+    private tut3Sound tut3sound;
+
+    void Start () {
+        sound = GameObject.FindGameObjectWithTag("SoundManager");
+        tut3sound = sound.GetComponent<tut3Sound>();
+        point = transform.FindChild ("point");
 	}
 	
 	// Update is called once per frame
@@ -34,6 +39,7 @@ public class weaponAI : MonoBehaviour {
 		Transform temp = Instantiate (bullit, point.position, point.rotation) as Transform;
 		GameObject temp1 = temp.gameObject;
 		temp1.layer = 12;
+        tut3sound.playEnemy1();
 	}
 
 	public void setAgroTrue()

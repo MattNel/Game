@@ -25,12 +25,11 @@ public class box_col : MonoBehaviour {
 			{
 				GameObject temp = getParent(col.gameObject);
 				Destroy(temp);
-				
-			}else
+            }
+            else
 				if(col.gameObject.layer == 9)
 			{
-
-				theObserver.kill();
+                theObserver.kill();
 			}
 		}
 
@@ -52,7 +51,7 @@ public class box_col : MonoBehaviour {
 		Transform pre = null;
 		while(temp != null)
 		{
-			pre = temp;
+            pre = temp;
 			temp = temp.transform.parent;
 		}
 		

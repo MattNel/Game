@@ -21,13 +21,13 @@ public class weapon : MonoBehaviour {
 	float timeToFireG = 0;
 
     private GameObject sounds;
-    private MainMenuSoundManager tut3sound;
+    private tut3Sound tut3sound;
 
     void Start () {
 		point = transform.FindChild ("point");
 
         sounds = GameObject.FindGameObjectWithTag("SoundManager");
-        tut3sound = sounds.GetComponent<MainMenuSoundManager>();
+        tut3sound = sounds.GetComponent<tut3Sound>();
     }
 	
 	// Update is called once per frame
