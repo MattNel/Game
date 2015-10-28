@@ -41,14 +41,20 @@ public class loosingCondition : MonoBehaviour {
 
 	public void toggleNOKILL()
 	{
-		cantDie = !cantDie;
+        if (cantDie == false)
+            cantDie = true;
+        else
+            cantDie = false;
 	}
 
 	public void damage()
 	{
-		health--;
-		bar.sizeDelta = new Vector2 ((barUnit -= 9.95f),27);
-		tut3sound.playDamage();
+        if (cantDie != true)
+        {
+            health--;
+            bar.sizeDelta = new Vector2((barUnit -= 9.95f), 27);
+            tut3sound.playDamage();
+        }
 	}
 	
 		public void kill()
