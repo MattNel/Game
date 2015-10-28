@@ -52,6 +52,13 @@ public class MainMenuSoundManager : MonoBehaviour {
     void Update () {
         EnterSound.volume = (InterfaceSound / 10f);
         HoverSound.volume = (InterfaceSound / 10f);
+
+        mainMenu.volume = (BackgroundSound / 10f);
+        lvl1.volume = (BackgroundSound / 10f);
+        lvl2.volume = (BackgroundSound / 10f);
+        lvl3.volume = (BackgroundSound / 10f);
+        lvl4.volume = (BackgroundSound / 10f);
+
         if (MasterSound != OldMasterSound)
         {
             InterfaceSound = MasterSound;
@@ -155,5 +162,54 @@ public class MainMenuSoundManager : MonoBehaviour {
     public void playJumpLand()
     {
         JumpLandSound.Play();
+    }
+    public void playmainMenu()
+    {
+        mainMenu.Play();
+        mainMenu.loop = true;
+        lvl1.Stop();
+        lvl2.Stop();
+        lvl3.Stop();
+        lvl4.Stop();
+    }
+
+    public void playlvl1()
+    {
+        mainMenu.Stop();
+        lvl1.Play();
+        lvl1.loop = true;
+        lvl2.Stop();
+        lvl3.Stop();
+        lvl4.Stop();
+    }
+
+    public void playlvl2()
+    {
+        mainMenu.Stop();
+        lvl1.Stop();
+        lvl2.Play();
+        lvl2.loop = true;
+        lvl3.Stop();
+        lvl4.Stop();
+    }
+
+    public void playlvl3()
+    {
+        mainMenu.Stop();
+        lvl1.Stop();
+        lvl2.Stop();
+        lvl3.Play();
+        lvl3.loop = true;
+        lvl4.Stop();
+    }
+
+    public void playlvl4()
+    {
+        mainMenu.Stop();
+        lvl1.Stop();
+        lvl2.Stop();
+        lvl3.Stop();
+        lvl4.Play();
+        lvl4.loop = true;
     }
 }

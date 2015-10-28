@@ -20,10 +20,15 @@ public class tut3Sound : MainMenuSoundManager {
         CrateSound.volume = (EffectsSound / 10f);
         JumpSound.volume = (EffectsSound / 10f);
         JumpLandSound.volume = (EffectsSound / 10f);
+
+        mainMenu.volume = (BackgroundSound / 10f);
+        lvl1.volume = (BackgroundSound / 10f);
+        lvl2.volume = (BackgroundSound / 10f);
+        lvl3.volume = (BackgroundSound / 10f);
+        lvl4.volume = (BackgroundSound / 10f);
     }
 
     // Update is called once per frame
-    p2uc pp;
 
     void Update()
     {
