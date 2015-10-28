@@ -7,7 +7,7 @@ public class loosingCondition : MonoBehaviour {
 	float barUnit = 199f;
 	public GameObject thePlayer;
 	public RectTransform bar;
-	public Animator anim;
+	//public Animator anim;
 
     private GameObject sounds;
     private tut3Sound tut3sound;
@@ -23,7 +23,7 @@ public class loosingCondition : MonoBehaviour {
 			    health = 20;
 		    }
 		    barUnit = 199;
-		    anim = thePlayer.GetComponent<Animator>();
+		    //anim = thePlayer.GetComponent<Animator>();
         }
 	
 	// Update is called once per frame
