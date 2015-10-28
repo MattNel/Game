@@ -32,6 +32,8 @@ public class bulHit : MonoBehaviour {
 			expo.Play();
 		} else
 		if (col.gameObject.layer == 11||col.gameObject.layer == 12||col.gameObject.layer == 16) {
+
+				
 				
 				Destroy (gameObject);
 				swaper.setTarget (col.gameObject, null);
@@ -39,6 +41,7 @@ public class bulHit : MonoBehaviour {
 				expo.Play();
                 if(col.gameObject.layer == 16)
                 {
+					col.gameObject.GetComponent<box>().changeON();
                     tut3sound.playCrate();
                 }
 

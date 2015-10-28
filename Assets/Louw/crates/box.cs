@@ -10,6 +10,9 @@ public class box : MonoBehaviour {
 	private Transform up;
 	loosingCondition theObserver;
 	GameObject player;
+	public Sprite c;
+	public Sprite c2;
+
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +29,13 @@ public class box : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (Input.GetMouseButton (1)) {
+			changeOFF ();
+		}
+		if (Input.GetMouseButton (0)) {
+			changeOFF ();
+		}
+
 		box_col temp;
 		
 		temp = (box_col)down.GetComponent (typeof(box_col));
@@ -53,6 +63,17 @@ public class box : MonoBehaviour {
 		}
 		
 	}
+	public void changeON()
+	{
+		this.GetComponent<SpriteRenderer>().sprite = c;
+	}
+	
+	public void changeOFF()
+	{
+		this.GetComponent<SpriteRenderer>().sprite = c2;
+	}
+	
+	// Update is called once per frame
 
 	public GameObject getParent(GameObject tar)
 	{
